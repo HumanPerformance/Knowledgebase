@@ -1,0 +1,18 @@
+// Using Repositories from Raspberry Pi
+// HPH Knowledgebase -RasPi
+// Fluvio L Lobo Fenoglietto
+
+
+// Description ::
+// This guide has been designed to instruct the user on the use of GitHub repositories from a Raspberry Pi
+
+// Background ::
+// What is a "repo" or "repository"?
+// Think of repositories as "(place) where files are stored".
+// Repositories are placed so that multiple users can access these "stored" files, in order to use thme or modify them.
+// GitHub repositories like the ones we have created for HPH and that will be used throughout the guide, track the progressive changhes that multiple users, from multiple sources, have made to the initial files!
+
+
+// Requirements ::
+
+1.0- Raspberry Pi
