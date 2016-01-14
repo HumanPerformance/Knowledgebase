@@ -62,7 +62,7 @@
 
 // Note that the port number "5901" comes from: (1) The VNC configuration file within Windows. The default port number is "5900". (2) The number of the VNC Server created in the Raspberry Pi terminal. If the server was created using (:1), the port number will be "5901"
 
-// References
+// References ::
 
 > https://www.raspberrypi.org/documentation/remote-access/
 > https://www.raspberrypi.org/documentation/remote-access/ssh/README.md
