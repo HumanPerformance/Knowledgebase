@@ -1,0 +1,18 @@
+// Boot Directly to Desktop
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// Follow this guide in order have Raspian boot directly into its main UI...\
+
+1.0- On the terminal, call raspberry configuration
+
+> sudo raspi-config
+
+2.0- Select option #3 - "Eanable Boot to Desktop/Scratch"
+
+3.0- Select option #2 - "Desktop Log in as user 'pi' at the graphical desktop"
+
+
+// References
+
+> http://raspberrypi.stackexchange.com/questions/7261/how-to-set-my-raspberry-pi-to-boot-into-the-gui

@@ -1,0 +1,72 @@
+// Access Raspberry Pi from Windows
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// Description ::
+// Follow this guide in order to access a Raspberry Pi through a // Windows computer (within the same network)
+
+// Requirements ::
+
+1.0- Ensure both the Raspberry Pi and the Windows computer are connected to the same network
+
+2.0- Determine the iP-address of the Raspberry Pi
+
+3.0- Download PuTTY on Windows
+
+> http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+4.0- Download TightVNC on Windows (only for graphical access)
+
+> http://www.tightvnc.com/download.php
+
+// Guide ::
+
+// SSH - Command Line
+
+1.0- In order to access the Raspberry Pi's terminal, first open PuTTY in the windows system
+
+2.0- Under "Session" (left :: on the GUI's directory-tree), type the Raspberry Pi iP-address for "Host Name" (right)
+
+3.0- Ensure that "SSH: is checked and click {Open}
+
+4.0- A terminal-like window will appear and prompt the user for "username" and "password" for the Raspberry Pi
+
+// VNC - Graphical Access
+
+1.0- Access the Raspberry Pi terminal (either directly or through SSH)
+
+2.0- Install the "TightVNC" package
+
+> sudo apt-get install tightvncserver
+
+3.0- Run "TightVNC Server", which will prompt for a password and an optional "view only" password
+
+> tightvncserver
+
+// Recommendation :: use a simple password, such as "raspberry"
+// Recommendation :: do not use a "view only" password
+
+4.0- Start a VNC server from the terminal. The following example starts a session on VNC display zero (:0) with full HD resolution
+
+> vncserver :0 -geometry 1920x1080 -depth 24
+
+5.0- Finally, from the computer, run "VNC Viewer"
+
+// The VNC Client installed several programs in your computer, open "TightVNC Viewer"
+
+6.0- For remote host, type the iP-address of the Raspberry Pi followed by the port number
+
+> 192.168.0.21::5901
+
+// Recall that the ip-address above may not represent that of your Raspberry Pi
+
+// Note that the port number "5901" comes from: (1) The VNC configuration file within Windows. The default port number is "5900". (2) The number of the VNC Server created in the Raspberry Pi terminal. If the server was created using (:1), the port number will be "5901"
+
+// References
+
+> https://www.raspberrypi.org/documentation/remote-access/
+> https://www.raspberrypi.org/documentation/remote-access/ssh/README.md
+> https://www.raspberrypi.org/documentation/remote-access/ssh/windows.md
+> http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+> https://www.raspberrypi.org/documentation/remote-access/vnc/README.md
+> http://www.tightvnc.com/download.php

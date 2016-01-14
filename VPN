@@ -1,0 +1,13 @@
+// Establishing Server Connection
+//
+// This guide has been designed to help the user install and establish a server connection on the Raspberry Pi 2
+//
+// Fluvio L Lobo Fenoglietto
+
+1.0- First, the user must download and install one of the following VPN software packages for Linux
+
+> sudo apt-get install pptp-linux
+
+or...
+
+> sudo apt-get install openvpn

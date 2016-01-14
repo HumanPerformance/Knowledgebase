@@ -1,0 +1,19 @@
+
+// Things to do after installing Raspian Wheezy
+// HPH Knowledgebase
+// Fluvio L. Lobo Fenoglietto
+
+1- Install the LibreOffice suite:
+
+1.1- Libre Writer -- sudo apt-get install libreoffice-writer
+1.2- Libre Spreadsheet -- sudo apt-get install libreoffice-calc
+1.3- Libre Presentation -- sudo apt-get install libreoffice-impress
+1.4- Libre Drawing -- sudo apt-get install libreoffice-draw
+1.5- Libre Database -- sudo apt-get install libreoffice-base
+1.6- Libre Equation Editor -- sudo apt-get install libreoffice-math
+1.7- Libre Mobile Devices Filter -- sudo apt-get install libreoffice-filter-mobiledev
+
+2- Install Virtual Keyboard for touchscreen applications
+
+2.1- Matchbox Keyboard -- sudo apt-get install matchbox-keyboard
+2.2- Create desktop shortcut to execute virtual keyboard (see guide)

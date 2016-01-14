@@ -1,0 +1,20 @@
+// Useful Functions
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// In this guide you will find a list of frequently performed tasks and the corresponding linux code to complete them...
+
+1. How to determine the path of an installed program?
+
+> which [name of app]
+
+For instance
+
+> which matchbox-keyboard
+> which leafpad
+
+2. How to create text files from terminal?
+
+> sudo nano
+
+Recall that "sudo" grants permission from the administrator or the super user. Hence, "nano" is the real text editor command...

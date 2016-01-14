@@ -1,0 +1,28 @@
+// RPi Camera SetUp
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// Follow this guide to learn how to install the Raspberry Pi camera module
+
+1.0- Ensure the Raspberry Pi Board is up-to-date using the following commands
+
+WARNING! This may take a while!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Access the board's configuration settings through the following command...
+
+> sudo raspi-config
+
+3.0- Within the configuration window:
+
+3.1- Navigate to "Camera"
+3.2- Select "Enable"
+3.3- Select "Finish" and reboot
+
+4.0- After the reboot, turn the board off, connect the camera and turn the system on again
+
+// References
+
+> https://www.raspberrypi.org/blog/camera-board-available-for-sale/

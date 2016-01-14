@@ -1,0 +1,66 @@
+// Installing OpenCV Libraries in Raspbian
+//
+// This guide was designed to help the user install OpenCV libraries on Raspbian Wheezy
+//
+// Fluvio L Lobo Fenoglietto
+
+
+// Requirements ::
+
+1.0- Install 'cmake'
+
+> sudo apt-get install cmake
+
+
+
+// Guide ::
+
+1.0- Install CSI camera on the Raspberry Pi Board
+
+2.0- Installation and compilation of userland
+
+2.1- Download the entire userland-master repository from github
+
+> https://github.com/raspberrypi/userland
+
+2.2- Unzip folder
+
+2.3- Move directory, with permissions, to the "/opt/vc" directory
+
+...if the file is within the downloads folder
+
+> sudo mv /pi/Downloads/userland-master /opt/vc/usserland-master
+
+...otherwise, modify the path on the basis of its origianl location
+
+2.4- On the terminal, go to the "/opt/vc/userland-master" directory
+
+> cd /opt/vc/userland-master
+
+2.5- Type
+
+> sed -i 's/if (DEFINED CMAKE_TOOLCHAIN_FILE)/if (NOT DEFINED CMAKE_TOOLCHAIN_FILE)/g' makefiles/cmake/arm-linux.cmake
+
+2.6- Create a build directory
+
+> sudo mkdir build
+
+2.7- Move to build directory
+
+> cd build
+
+2.8- Compile files (long wait)
+
+> sudo cmake -DCMAKE_BUILD_TYPE=Release ..
+> sudo make
+> sudo make install
+
+// Binary files should now be available under /opt/vc/userland-master/build/bin
+// In order to validate that the entire process has been done successfully, the user may execute:
+
+> raspistill -t 3000
+
+// From /opt/vc/userland-master/build/bin
+
+
+

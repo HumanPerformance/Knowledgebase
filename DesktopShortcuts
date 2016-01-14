@@ -1,0 +1,44 @@
+// Creating Desktop Shortcuts
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// Follow these instructions to create a desktop shortcut for any installed or developed applications
+
+
+1- Create text file, within the desktop directory, which will become the desktop shortcut
+
+1.1- Create file from terminal using -- sudo nano /home/pi/Desktop/[filename].desktop
+1.2- Add the following text:
+	
+	[Desktop Entry]
+	Name=My Name // Add the name of the shortcut to be displayed
+	Comment=My application which does this // Description of the shorcut
+	Icon=/usr/share/pixmaps/openbox.xpm // Path to the icon
+	Exec=/usr/bin/leafpad // IMPORTANT: What does the shortcut execute on click?
+	Type=Application
+	Encoding=UTF-8
+	Terminal=false
+	Categories=None;
+
+In order to make this guide effective, here is the example of the shortcut made for the Matchbox-Keyboard
+
+> sudo nano /home/pi/Desktop/VirtualKeyboard.desktop
+
+Then copied:
+
+	[Desktop Entry]
+	Name=Virtual Keyboard
+	Comment=Opens Matchbox Keyboard
+	Icon=/usr/share/pixmaps/openbox.xpm
+	Exec=/usr/bin/matchbox-keyboard
+	Type=Application
+	Encoding=UTF-8
+	Terminal=false
+	Categories=None;
+
+Then pressed Ctrl+X, then Y, then Enter/Return
+The icon should appear on the desktop shortly!
+
+// References
+
+> http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/gui/desktop-shortcuts

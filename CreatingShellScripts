@@ -1,0 +1,67 @@
+// How to Create a Shell Script
+//
+// Fluvio L Lobo Fenoglietto
+//
+// This guide was written to guide the user into creating "shell scripts"
+
+// Background ::
+
+> What are "shell scripts"?
+Shell scripts are short programs that are written in a shell programming language and interpreted by a shell process.
+They are extremely useful for automating tasks on Linux and other Unix-like operating systems.
+
+> What is a "shell" or a "shell environment"?
+The word "shell" refers to the command window or terminal. In other words, "shell scripts" are programs that run off the terminal.
+
+// Requirements ::
+
+1.0- Always perform system update and upgrade!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+// Guide (Good morning, world!)::
+
+1.0- Open a text editor. For instance, "leaf-pad" will be used throughout this tutorial
+
+> sudo leafpad
+
+2.0- On the first line of the document, type...
+
+> #! /bin/bash
+
+// The first line the operating system what shell to use to interpret the script and the location (i.e., absolute pathname) of the shell.
+// The shell is bash, which is located in the /bin directory (as are all shells); thus the line contains /bin/bash.
+// This instruction is always preceded by a pound sign and an exclamation mark in order to inform the operating system that it is providing the name and location of the shell (or other scripting language).
+
+3.0- On the lines following the "absolute path", type the desired command
+
+> clear
+> echo "Good morning, world."
+
+4.0- Save the file wherever with whatever name you like.
+
+// In this example, the file was save with the name of "morning"
+// The file was saved under the newly created directory "HPHApps", located in "/pi/HPHApps"
+
+5.0- Attempt the first execution (no worries, you will fail!)
+
+// Using the command window, execute the newly saved file
+// An error will appear on the terminal, reading...
+
+> bash: ./morning: Permission denied
+
+// This error occurs because the file itself has not be set as an executable
+
+6.0- Set file permission to executable
+
+// Move to the directory of the file and, within the terminal, type...
+
+> sudo chmod 755 morning
+
+7.0- Execute NOW!
+
+
+// References ::
+
+> http://www.linfo.org/create_shell_1.html

@@ -1,0 +1,93 @@
+// How to Install and Manage a Bluetooth Module
+// HPH Knowledgebase
+// Fluvio L Lobo Fenoglietto
+
+// Background ::
+
+> Bluetooth is a wireless technology standard for exchanging data over short distances (using short-wavelength UHF radio waves in the ISM band from 2.4 to 2.485 GHz[4]) from fixed and mobile devices, and building personal area networks (PANs).
+> Bluetooth modules and/or antennas can be adapted to micro-controllers in order to communicate sensor data to a control system like the Raspberry Pi.
+
+// Guide ::
+
+1.0- Always update and upgrade raspbian!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Install bluetooth libraries and manager
+
+> sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2
+
+// Follow installation instructions if any
+
+3.0- Change audio default settings
+
+> sudo usermod -a -G lp pi
+
+4.0- Change the default bluetooth settings
+
+> sudo nano /etc/bluetooth/audio.conf
+
+// Within the file, under [General] add...
+
+Enable=Source,Sink,Media,Socket
+
+5.0-Change the resampling algorithm from the pulse-audio configuration file
+
+> sudo nano /etc/pulse/daemon.conf
+
+// Within the text, find the line referring to resample-method and add...
+
+resample-method = trivial
+
+6.0- Reboot your raspberry
+
+> sudo reboot
+
+7.0- Ensure your bluetooth adapter is working
+
+> sudo hciconfig -a
+
+// All the information about the bluetooth module (USB-based most likely) will appear.
+// The information includes module default name and bluetooth address
+
+8.0- Perform a bluetooth device scan
+
+> sudo hcitool scan
+
+// The list of available devices will show within the terminal
+
+%%%%%%%%%%%%%% Revision needed %%%%%%%%%%%%%%%%
+
+9.0- Try openning a connection
+
+> sudo hcitool cc XX:XX:XX:XX:XX:XX
+
+// Where XX:XX... refers to the bluetooth address of the device
+
+10.0- Pairing with device
+
+> sudo hciconfig hci0 piscan
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+11.0- Connect to device using the Bluetooth GUI
+
+12.0- Verify device listed in terminal
+
+> pactl list sources short
+
+// Here, the device is listed as a source!!
+
+13.0- 
+
+
+3.0- Access bluetooth manager GUI from 
+
+> Menu > Preferences > Bluetooth Manager
+
+// References ::
+
+> https://en.wikipedia.org/wiki/Bluetooth
+> https://www.thinkpenguin.com/gnu-linux/bluetooth-usb-adapter-setup-raspbian-raspberry-pi
+> https://www.raspberrypi.org/forums/viewtopic.php?f=38&t=68779

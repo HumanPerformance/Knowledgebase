@@ -1,0 +1,29 @@
+// Installing Processing
+// HPH Knowledgebase
+// Fluvio L Lobo Fenoglietto
+//
+
+// Description ::
+// The following guide has been designed to help the user install Processing on a Raspberry Pi!
+
+// Backgorund ::
+// What is processing?
+// Processing is an open-source development environment for several computer languages (including Java, C++, Android, and Python).
+// Processing can be used to develop applications for micro-controllers such as Arduinos!
+
+// Guide ::
+
+1.0- Always update and upgrade raspbian
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Download Processing for Raspberry Pi
+
+> curl https://processing.org/download/install-arm.sh | sudo sh
+
+// Follow download instructions if any...
+
+// References ::
+
+> https://www.raspberrypi.org/blog/now-available-for-download-processing/

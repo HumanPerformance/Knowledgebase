@@ -1,0 +1,80 @@
+// Installing OpenCV Libraries in Raspbian
+//
+// This guide was designed to help the user install OpenCV libraries on Raspbian Wheezy
+//
+// Fluvio L Lobo Fenoglietto
+
+
+// Requirements ::
+
+1.0- Update system
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Install 'cmake'
+
+> sudo apt-get install cmake
+
+
+// Guide ::
+
+1.0- Install dependencies
+
+> sudo apt-get -y install build-essential cmake cmake-curses-gui pkg-config libpng12-0 libpng12-dev libpng++-dev libpng3 libpnglite-dev zlib1g-dbg zlib1g zlib1g-dev pngtools libtiff4-dev libtiff4 libtiffxx0c2 libtiff-tools libeigen3-dev
+
+
+2.0- Then, install
+
+> sudo apt-get -y install libjpeg8 libjpeg8-dev libjpeg8-dbg libjpeg-progs ffmpeg libavcodec-dev libavcodec53 libavformat53 libavformat-dev libgstreamer0.10-0-dbg libgstreamer0.10-0 libgstreamer0.10-dev libxine1-ffmpeg libxine-dev libxine1-bin libunicap2 libunicap2-dev swig libv4l-0 libv4l-dev python-numpy libpython2.6 python-dev python2.6-dev libgtk2.0-dev 
+
+3.0- Download OpenCV3.0
+
+3.1- Either download from the website
+
+> wget http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/3.0.0/opencv-3.0.0.zip
+
+3.2- Or clone the latest version of the git repo
+
+> git clone https://github.com/Itseez/opencv.git
+
+// For this guide, the repo was cloned
+
+4.0- Find folder and install
+
+4.1- If repo was downloaded (zip-file)
+
+> unzip opencv-3.0.zip
+> cd opencv
+> sudo mkdir release
+> cd release
+> sudo ccmake ../
+
+4.2- If repo was cloned
+
+> cd opencv
+> sudo mkdir release
+> cd release
+> sudo ccmake ../
+
+5.0- Within ccmake
+
+// Press 'c' to configure
+// Wait for configurations to appear...
+// Make any desired changes
+// Press 'c' again
+// When done configuring, the option 'g' will appear on the menu
+// Press 'g' to make file
+// The program will take you to the terminal once completed
+
+6.0- In the terminal, type
+
+> make
+> sudo make install
+
+
+
+
+// References ::
+
+> http://robertcastle.com/2014/02/installing-opencv-on-a-raspberry-pi/

@@ -1,0 +1,20 @@
+// Enable Auto Login on Raspberry Pi -Wheezy
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// In order to allow for Raspian to automatically log-in, follow this guide...
+// WARNING! This will make the device accessible to ANYONE!!
+
+1.0- Find and edit the "/etc/inittab" file
+
+2.0- Within the file, find the line:
+
+> 1:2345:respawn:/sbin/getty --noclear 38400 tty1
+
+3.0- Add the "--autologin {username}" option
+
+> 1:2345:respawn:/sbin/getty --autologin {USERNAME} --noclear 38400 tty1
+
+// References
+
+> http://raspberrypi.stackexchange.com/questions/3873/auto-login-with-gui-disabled-in-raspbian

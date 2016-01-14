@@ -1,0 +1,16 @@
+// Changing Keyboard Layout from Terminal
+// HPH Knowledgebase -RasPi
+// Fluvio L. Lobo Fenoglietto
+
+// Follow this guide to change the keyboard layout, by country code, from the command terminal
+
+1. In the terminal, type:
+
+> setxkbmap [2 letter country code]
+
+For instance,
+
+> setxkbmap us
+ 
+// References
+> http://raspberrypi.stackexchange.com/questions/10060/raspbian-keyboard-layout

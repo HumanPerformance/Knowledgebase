@@ -1,0 +1,20 @@
+// Installing Arduino Libraries
+// HPH Knowledgebase
+// Fluvio L Lobo Fenoglietto
+//
+
+// Background ::
+
+// What are Arduinos?
+// Arduinos are open-source micro-controllers designed to allow for anyone to build and control circuits easily
+// Arduinos are controlled through the Arduino IDE, which can be downloaded for free from the Arduino site.
+
+// Guide ::
+
+1.0- Download Arduino Libraries
+
+> sudo apt-get install arduino
+
+// References ::
+
+> http://baldwisdom.com/simplified-setup-for-arduino-on-raspberry-pi/

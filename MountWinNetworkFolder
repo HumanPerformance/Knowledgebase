@@ -1,0 +1,41 @@
+// Mount Windows-based Shared Folders to Raspberry Pi
+//
+// Fluvio L Lobo Fenoglietto
+//
+// This guide was written to guide the user in the process of mounting a network folder, created on a Windows environment, to Raspbian
+
+
+// Requirements ::
+
+1.0- Always perform system update and upgrade!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+// Guide ::
+
+1.0- Create folder within mount directory '/mnt'
+
+// All mounted folders will be located within '/mnt/'
+// This guide uses the HPH network folder, within IST, as an example
+
+> cd /mnt/
+> sudo mkdir HPH (or your folder name of choice)
+
+// Recall that you may use the 'ls' command to verify the directory was created
+
+2.0- Mount folder using its network path
+
+> sudo mount -t cifs -o username=*****,password=***** //ist-02.net.ist.ucf.edu/HPH /mnt/HPH
+
+// Note that the path used here is that of the ist HPH network folder
+// This should mount the folder!!
+
+3.0- If you wish to unmount the directory
+
+> sudo umount //ist-02.net.ist.ucf.edu/HPH
+
+
+// References ::
+
+> https://rasspberrypi.wordpress.com/2012/09/04/mounting-and-automounting-windows-shares-on-raspberry-pi/
