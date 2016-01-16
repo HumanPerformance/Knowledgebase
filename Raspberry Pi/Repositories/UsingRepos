@@ -1,0 +1,61 @@
+// Using Repositories from Raspberry Pi
+// HPH Knowledgebase -RasPi
+// Fluvio L Lobo Fenoglietto
+
+
+// Description ::
+// This guide has been designed to instruct the user on the use of GitHub repositories from a Raspberry Pi
+
+// Background ::
+// What is a "repo" or "repository"?
+// Think of repositories as "(place) where files are stored".
+// Repositories are placed so that multiple users can access these "stored" files, in order to use thme or modify them.
+// GitHub repositories like the ones we have created for HPH and that will be used throughout the guide, track the progressive changhes that multiple users, from multiple sources, have made to the initial files!
+
+
+// Requirements ::
+
+1.0- Raspberry Pi
+
+
+// Guide ::
+
+1.0- As always, update Raspbian!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Install/Update Git
+// The Git package usually comes pre-installed within most Raspbian distributions. However, just in case an update is missing...
+
+> sudo apt-get install git
+
+3.0- Setting-up a repository
+// There are two (2) ways of setting-up a repository within the Raspberry Pi...
+
+3.1- Initializing or Creating a Repository (init)
+
+> sudo git init
+
+// The function "init" transforms the current directory into a git repository
+
+3.2- Cloning a Repository (clone)
+
+> sudo git clone <web address>
+
+// The function "clone" (for lack of a better word cough*clone*cough*) an existing repository into the current directory. The "clone" function will be used extensively in our applications as most of HPH repositories will be created using the GitHub web interface.
+
+// Given that most of the HPH repositories will be created and hosted online (though GitHub), cloning them will require that the user specifies the web address (url). This is shown in the following examples...
+
+> sudo git clone https://github.com/HumanPerformance/Knowledgebase
+
+// The "Knowledgebase" repository, shown above, is the HPH repository for manuals and/or guides like this one!!! Hooray!!!
+
+
+
+
+// References ::
+
+> https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init
+
+> supercollider.github.io/development/git-cheat-sheet.html
