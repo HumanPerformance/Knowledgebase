@@ -1,0 +1,23 @@
+// Fetch and Pull Committs using Git
+// HPH Knowledgebase -RasPi
+// Fluvio L Lobo Fenoglietto
+// Description ::
+// Fetching and pulling committs consists of updating the local repo with the changes made to a given branch (or the origin)
+// Guide ::
+1.0- Move to local repo directory
+> cd /local/repo/directoy
+2.0- Verify the available branches
+// This is  important as the user may prefer to fetch/pull from different branches
+> sudo git branch -r
+2.0- Fetch changes made to the repository
+> sudo git fetch origin
+3.0- Review committs added through the fetch command
+> sudo git log --oneline master
+// Recall that in order to exit the "log" command, the user must press the key "q"
+4.0- Approve changes and merge them into the local repo
+> sudo git merge origin/master
+5.0- Alternatively, the user may skip the "fetch-merge" process by using "pull"
+> sudo git pull origin
+
+// References ::
+> https://www.atlassian.com/git/tutorials/syncing
