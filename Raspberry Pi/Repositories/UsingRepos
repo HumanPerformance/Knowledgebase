@@ -51,8 +51,18 @@
 
 // The "Knowledgebase" repository, shown above, is the HPH repository for manuals and/or guides like this one!!! Hooray!!!
 
+4.0- Showing the remote connections to repositories
 
+// The user may always check for the connected or remote repositories by using the "remote" command...
 
+// Note that the user must also be in the directory where the desired repository is connected
+
+> cd /local/directory/of/repo
+> sudo git remote -v
+
+// The option or extension "-v" lists the url address or link to the connected repository
+
+// The "remote" command is important as it will alwasy be used to fetch and push committs!
 
 // References ::
 
