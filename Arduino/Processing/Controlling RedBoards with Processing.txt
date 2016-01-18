@@ -1,5 +1,47 @@
-// Controlling RebBoard with Processing
+// Controlling RebBoards with Processing
 // HPH Knowledgebase -Win
 // Fluvio L Lobo Fenoglietto
 //
 
+// Description :: 
+// This guide has been written with the purpose of guiding the user on the control of RebBoards (Arduino equivalents) by algorithms developed using Processing!
+
+// Requirements ::
+
+1.0- Install Arduino IDE
+
+> https://www.arduino.cc/
+
+2.0- Install Processing
+
+> https://processing.org/
+
+3.0- Connect RedBoard or Arduino board
+
+// Guide ::
+
+1.0- Install Standard Firmata
+// In order for Processing's Java-based codes to control the Arduino, first the user needs to upload some software on the RedBoard (or Arduino). Think about this as the firmware update!
+
+// To do this...
+
+> Run Arduino IDE
+> File >> Examples >> Firmata >> StandardFirmata
+> Tools >> Select the appropriate "Board" and "Port"
+> Upload Sketch
+
+// For more details on how to use Arduino IDE, follow the corresponding guides for Arduinos
+
+2.0- Open Processing
+
+// In processing, the user may...
+
+2.1- Develop their own application using Java
+
+2.2- Open one of the Sample Codes within the Knowledgebase Repo. For isntance, "flashingLight.pde"
+
+
+// References ::
+
+> https://www.arduino.cc/
+> https://processing.org/
