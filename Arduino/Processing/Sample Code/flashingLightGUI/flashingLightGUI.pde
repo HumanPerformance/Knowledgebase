@@ -20,22 +20,24 @@ int comPort = 1;
 
 
 public void setup(){
+    
+  size(480, 320, JAVA2D);
+  createGUI();
+  customGUI();
+  
   
   // Arduino Connection
   println(Arduino.list()); // Prints the list of COM Ports on the Processing Command Window
   arduino = new Arduino(this, Arduino.list()[comPort], 5760); // Selects the COM Port taken by the Arduino
                                                               // In this code, the user knows the COM Port of the Arduino beforehand
-  
-  
-  size(480, 320, JAVA2D);
-  createGUI();
-  customGUI();
-  // Place your setup code here
+
   
 }
 
 public void draw(){
   background(230);
+  
+  
   
 }
 
