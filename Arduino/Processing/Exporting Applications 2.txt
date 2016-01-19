@@ -1,0 +1,9 @@
+// Exporting Applications from Processing
+// HPH Knowledgebase -Win
+// Fluvio L Lobo Fenoglietto
+//
+
+// Description ::
+This short guide helps users on "exporting" algorithms written in Processing
+
+In Processing, "exporting" refers to the consolidation or compilation of the code into an executable application
