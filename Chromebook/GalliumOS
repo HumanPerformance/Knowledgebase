@@ -1,0 +1,31 @@
+// Installing Gallium OS
+// HPH Knowledgebase -Chromebook
+// Fluvio L. Lobo Fenoglietto
+
+// Background ::
+
+// What are Chromebooks?
+> Chromebooks are portable, energy-efficient, and affordable computers developed between Google and several computer manufacturers (Acer, Asus, Toshiba, Lenovo, etc.).
+> While the manufacturer delivers the hardware, Google equips these devices with Chrome OS.
+> Chrome OS can be described as a simple and light OS specifically design for simple media and processing work.
+> Google envisioned Chromebooks to be used by the mainstream consumer, which uses computers for web browsing, email, video streaming, and maybe some light word processign.
+
+// Why NOT Chrome OS?
+> Chrome OS is a very limited OS. It is also incompatible with any other mainstream OS, including open-source distributions of Linux.
+> Given the low price tag on the system, many users have attempted to fit mainstream OSs within Chromebooks.
+> Although a difficult task, it has been possible primarily for light Linux distributions.
+
+// Why Gallium OS?
+> Gallium OS, released for the first time on December 2015, is the first formal attempt at costum-designing a Linux distribution for Chromebooks.
+> Gallium is a light version of Linux but without compromises! Hence, it is currently the best alternative available.
+
+// Description ::
+
+> This guide has been designed to help the user install GalliumOS on a Chromebook
+> Important Notes:
+> 1.0 This guide was completed with an Acer CB3-111 Chromebook. The steps may vary depending on the Chromebook model. For more information, visit the GalliumOS Website.
+> 2.0 This process MAY BRICK your Chromebook. In other words, it may damage the computer permanently. Follow at your own risk!!! You will be reminded throughout the process.
+> 3.0 In some instances (depends on the Chromebook), the original ChromeOS will be deleted completely! In other words, THERE IS NO GOING BACK!!!
+
+// References ::
+> https://galliumos.org/
