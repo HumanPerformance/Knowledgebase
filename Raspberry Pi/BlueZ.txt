@@ -1,0 +1,101 @@
+// Installation and implementation of BlueZ
+// HPH Knowledgebase
+// Fluvio L Lobo Fenoglietto 02/04/2016
+
+// Background ::
+
+> Bluetooth is a wireless technology standard for exchanging data over short distances (using short-wavelength UHF radio waves in the ISM band from 2.4 to 2.485 GHz[4]) from fixed and mobile devices, and building personal area networks (PANs).
+> Bluetooth modules and/or antennas can be adapted to micro-controllers in order to communicate sensor data to a control system like the Raspberry Pi.
+> BlueZ is the original and official bluetooth protocol stack for Linux
+
+// Guide ::
+
+1.0- Always update and upgrade raspbian!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Install bluetooth libraries and manager
+
+> sudo apt-get install libdbus-1-dev libdbus-glib-1-dev libglib2.0-dev libical-dev libreadline-dev libudev-dev libusb-dev make
+
+Follow installation instructions if any
+
+3.0- Download source
+
+The user must know the latest (or desired) version of BlueZ to install. For more information, visit http://www.bluez.org/
+
+> mkdir -p work/bluepy
+> cd work/bluepy
+> wget https://www.kernel.org/pub/linux/bluetooth/bluez-5.37.tar.xz
+> tar xvf bluez-5.37.tar.xz
+
+As of 02/04/2016, version 5.37 is the latest iteration of BlueZ
+
+4.0- Once the download is completed, the user must build the program by...
+
+> cd bluez-5.32
+> ./configure --disable-systemd
+> make
+
+Note that the make process mayu take upwards of 30 minutes to 1 hour...
+
+5.0- Once finished making, install...
+
+> sudo make install
+
+
+
+
+6.0- Reboot your raspberry
+
+> sudo reboot
+
+7.0- Ensure your bluetooth adapter is working
+
+> sudo hciconfig -a
+
+// All the information about the bluetooth module (USB-based most likely) will appear.
+// The information includes module default name and bluetooth address
+
+8.0- Perform a bluetooth device scan
+
+> sudo hcitool scan
+
+// The list of available devices will show within the terminal
+
+%%%%%%%%%%%%%% Revision needed %%%%%%%%%%%%%%%%
+
+9.0- Try openning a connection
+
+> sudo hcitool cc XX:XX:XX:XX:XX:XX
+
+// Where XX:XX... refers to the bluetooth address of the device
+
+10.0- Pairing with device
+
+> sudo hciconfig hci0 piscan
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+11.0- Connect to device using the Bluetooth GUI
+
+12.0- Verify device listed in terminal
+
+> pactl list sources short
+
+// Here, the device is listed as a source!!
+
+13.0- 
+
+
+3.0- Access bluetooth manager GUI from 
+
+> Menu > Preferences > Bluetooth Manager
+
+// References ::
+
+> https://en.wikipedia.org/wiki/Bluetooth
+> https://www.thinkpenguin.com/gnu-linux/bluetooth-usb-adapter-setup-raspbian-raspberry-pi
+> https://www.raspberrypi.org/forums/viewtopic.php?f=38&t=68779
+> http://www.elinux.org/RPi_Bluetooth_LE
