@@ -10,8 +10,8 @@
 
 // Description ::
 
+> This guide was meant for the communication of our prototypes with our control system, which is a Rapsberry Pi - Raspbian, its OS, is Linux distribution. 
 > This guide has been built to demonstrate the capabilities for accessing multiple bluetooh-serial ports from your Raspberry Pi
-
 > Given the specificity of the demo, some of the instructions may require referencing additional guides and tutorials from the HPH Knowledgebase
 
 // Requirements ::
@@ -28,6 +28,7 @@
 >> 4.0 - Jumper wires
 >> 5.0 - USB cable to connect Ardunions to computer
 >> 6.0 - Barrel jack connectors to power Arduinos without PC
+>> 7.0 - Bluetooth donggle for your Raspberry Pi or Linux system
 > Software:
 >> 1.0 - Arduino IDE
 >> 2.0 - Copy of StandardFirmata.ino
@@ -56,6 +57,14 @@ Bluetooth module pin / Arduino Pin
 > GND / GND
 > VCC / 5V or 3.3V --Depending on the module
 
+4.0 - Power the two arduino boards with the barrel jack connectors
+
+> If connected correctly, a flasing red light will be observed on the bluetooth modules.
+> If you are using the same modules (RN42 - BlueSMiRF), the light will be flashing at about 1Hz (1 flash per second).
+
+5.0 - On the Linux system (hopefully a Raspberry Pi! Hooray!), open the terminal.
+
+6.0 - First, check the status of your bluetooth donggle
 
 
 // Refernces ::
