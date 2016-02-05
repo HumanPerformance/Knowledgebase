@@ -1,0 +1,46 @@
+// Pairing and implementation of multiple bluetooth modules
+// HPH Knowledgebase
+// Fluvio L Lobo Fenoglietto 02/05/2016
+
+// Background ::
+
+> Bluetooth is a wireless technology standard for exchanging data over short distances (using short-wavelength UHF radio waves in the ISM band from 2.4 to 2.485 GHz[4]) from fixed and mobile devices, and building personal area networks (PANs).
+> Bluetooth modules and/or antennas can be adapted to micro-controllers in order to communicate sensor data to a control system like the Raspberry Pi.
+> BlueZ is the original and official bluetooth protocol stack for Linux
+
+// Description ::
+
+> This guide has been built to demonstrate the capabilities for accessing multiple bluetooh-serial ports from your Raspberry Pi
+
+> Given the specificity of the demo, some of the instructions may require referencing additional guides and tutorials from the HPH Knowledgebase
+
+// Requirements ::
+
+> Follow and complete the original BlueZ guide
+
+// Equipment ::
+
+> This demo was completed with the following tools/instruments/devices:
+> Hardware:
+>> 1.0 - Arduino Redboards (x2) - Arduino Uno shoudl work also
+>> 2.0 - RN42 Bluetooth modules (x2)
+>> 3.0 - Breadboard (x1)
+>> 4.0 - Jumper wires
+>> 5.0 - USB cable to connect Ardunions to computer
+>> 6.0 - Barrel jack connectors to power Arduinos without PC
+> Software:
+>> 1.0 Arduino IDE
+>> 2.0 BlueZ
+
+// Guide ::
+
+1.0- Always update and upgrade raspbian!
+
+> sudo apt-get update
+> sudo apt-get upgrade
+
+2.0- Install Standar
+
+// Refernces ::
+
+> Fluvios BRAIN!!
