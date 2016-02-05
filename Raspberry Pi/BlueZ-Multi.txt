@@ -29,17 +29,34 @@
 >> 5.0 - USB cable to connect Ardunions to computer
 >> 6.0 - Barrel jack connectors to power Arduinos without PC
 > Software:
->> 1.0 Arduino IDE
->> 2.0 BlueZ
+>> 1.0 - Arduino IDE
+>> 2.0 - Copy of StandardFirmata.ino
+>> 2.0 - BlueZ
 
 // Guide ::
 
-1.0- Always update and upgrade raspbian!
+1.0 - Always update and upgrade raspbian!
 
 > sudo apt-get update
 > sudo apt-get upgrade
 
-2.0- Install Standar
+2.0 - Install StandardFirmata.ino
+
+> Prior to make any connection, upload the StandardFirmata.ino program to the Arduino boards using the Arduino IDE
+
+> NOTE: A fresh copy of StandardFirmata can be obtained from the examples within the Arduino IDE (File>Examples>Firmata>StandardFirmata)
+
+3.0 - Connect both bluetooth modules to their respective Arduino boards
+
+NOTE: Use wiring diagrams for details. Here are some basics.
+
+Bluetooth module pin / Arduino Pin
+> TX / RX (Digital Pin 0)
+> RX / TX (Digital Pin 1)
+> GND / GND
+> VCC / 5V or 3.3V --Depending on the module
+
+
 
 // Refernces ::
 
