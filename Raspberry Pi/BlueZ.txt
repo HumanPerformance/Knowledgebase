@@ -44,10 +44,11 @@ Note that the make process mayu take upwards of 30 minutes to 1 hour...
 
 > sudo make install
 
+6.0- While you are at it, install the utilities also
 
+> sudo apt-get install bluez-utils
 
-
-6.0- Reboot your raspberry
+7.0- Reboot your Raspberry Pi
 
 > sudo reboot
 
