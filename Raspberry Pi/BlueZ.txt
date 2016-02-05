@@ -52,7 +52,7 @@ Note that the make process mayu take upwards of 30 minutes to 1 hour...
 
 > sudo reboot
 
-7.0- Ensure your bluetooth adapter is working
+8.0- Ensure your bluetooth adapter is working
 
 > sudo hciconfig -a
 
@@ -63,40 +63,9 @@ Note that the make process mayu take upwards of 30 minutes to 1 hour...
 
 > sudo hcitool scan
 
-// The list of available devices will show within the terminal
+NOTE: The following steps may differ from guide-to-guide and device-to-device.
+Hence, I have opted for creating several follow-up guides for the specific device the user may need to connect to.
 
-%%%%%%%%%%%%%% Revision needed %%%%%%%%%%%%%%%%
+// Refernces ::
 
-9.0- Try openning a connection
-
-> sudo hcitool cc XX:XX:XX:XX:XX:XX
-
-// Where XX:XX... refers to the bluetooth address of the device
-
-10.0- Pairing with device
-
-> sudo hciconfig hci0 piscan
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-11.0- Connect to device using the Bluetooth GUI
-
-12.0- Verify device listed in terminal
-
-> pactl list sources short
-
-// Here, the device is listed as a source!!
-
-13.0- 
-
-
-3.0- Access bluetooth manager GUI from 
-
-> Menu > Preferences > Bluetooth Manager
-
-// References ::
-
-> https://en.wikipedia.org/wiki/Bluetooth
-> https://www.thinkpenguin.com/gnu-linux/bluetooth-usb-adapter-setup-raspbian-raspberry-pi
-> https://www.raspberrypi.org/forums/viewtopic.php?f=38&t=68779
 > http://www.elinux.org/RPi_Bluetooth_LE
