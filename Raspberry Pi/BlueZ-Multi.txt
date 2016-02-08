@@ -66,7 +66,72 @@ Bluetooth module pin / Arduino Pin
 
 6.0 - First, check the status of your bluetooth donggle
 
+> sudo hciconfig -a
 
-// Refernces ::
+> The terminal should print out information about your bluetooth donggle under hci0 (or another number if many --but I doubt it)
+> Keep an eye for the second line, you want the output to be "UP RUNNING", which signals that the module is "ON"
+
+7.0 - Perform a scan in order to look for devices
+
+> sudo hcitool scan
+
+> The terminal will print the devices and their address (XX:XX:XX:XX:XX:XX)
+> The address will be used to establish and stop communication with the modules
+> I recommend that you write down the address of the devices of interest...
+
+8.0 - Create a bluetooth object for each device. This is equivalent to pairing the device.
+
+> sudo bluez-simple-agent hci0 00:06:66:7D:97:2E
+> sudo bluez-simple-agent hci0 00:06:66:7C:8A:0B  
+
+> Once you hit enter, a message on the terminal will request the pin code of the device.
+> "Enter PIN Code:" is the message.
+> Look for your modules PIN code within the user manual. Most modules come with defualt PIN codes such as 0000 or 1234.
+> Once entered, the terminal will throw a message starting with "New device...", which is basically the confirmation.
+
+9.0 - There are several ways of verifying the connection
+
+> Open the bluetooth mnanager UI - You will see the two deivces listed and with a "key" on top of their icon (this translated to "paired")
+
+10.0 - Set-up the serial communication with bluetooth devices
+
+> Recall that we are transmitting serial data through these bluetooth modules.
+> Hence, we must define and save their information for suture reference.
+
+> 10.1 - Edit the rfcomm file
+
+>> sudo nano /etc/bluetooth/rfcomm.conf
+
+>> This will open the terminal-based line editor.
+>> For each module, where X must be replaced with a number in a series starting from "0", type the following...
+>> In some instances, like the "channel" number and the "name", just ensure they dont match between modules.
+>> Note that comments are preceeded by the "#" key.
+
+>> rfcommX {
+>>
+>>	# Automatically bind the device at startup
+>>      bind no;
+>>
+>>      # Bluetooth address of the device
+>>      device 00:06:66:7D:97:2E;
+>>
+>>      # RFCOMM channel for the connection
+>>      channel 1; --As of 
+>>
+>>      # Description of the connection
+>>      comment "rn42moduleX";
+>> } 
+
+> 10.2 Connect from the bluetooth terminal
+
+>> sudo rfcomm connect rfcommX
+
+>> Note that for multiple devices, you will need to open multiple command windows/terminals
+
+### Here I need to confirm that using the same channel wont affect the connections.
+
+
+
+// References ::
 
 > Fluvios BRAIN!!
