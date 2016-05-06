@@ -17,3 +17,68 @@
 1.1 - Expanding file systems
 
 	- From the terminal
+	> sudo raspi-config
+
+	- Exapnd file systems [Yes]
+		Expanding file systems will allow Raspbian to use the full memory of the SD card.
+
+x - CSEC Project Directories
+
+	The following directories need to be created in order to maintain an efficient distribution of content (applications, repositories, and documentation) created for the csec project.
+
+x.1 - Change to the home directory using cd
+
+	- The user has several options;
+		- Open a new terminal - automaticall located @ /pi/home
+		- From any other directory
+		> cd --
+
+x.2 - Create "csec" directory using mkdir
+
+	- From the terminal
+	> sudo mkdir csec
+
+x.3 - Create "/csec/repos/" using mkdir
+
+	- From the terminal
+	> cd csec
+	> sudo mkdir repos
+
+	- The repos directory will be used to store the repositories of all the content developed under the csec project.
+
+------------------------------------------
+x - Installing Important Programs and IDEs
+------------------------------------------
+
+	- Before we dive into the details of how to install every required program, here is a quick summary list:
+	1.0 - Arduino IDE
+	2.0 - Processing
+
+x.1 - Installing Arduino
+
+	- From the terminal
+	> sudo apt-get install arduino
+
+x.2 - Installing Processing
+
+	- From the terminal
+	> curl https://processing.org/download/install-arm.sh | sudo sh
+
+
+
+---------------------
+x - Git Configuration
+---------------------
+
+	Git will be used throughout this guide to clone/fetch/pull/commit/push the repositories of each application developed under the csec project.
+
+x.1 - Setting global parameters
+
+	- From the terminal
+	> sudo git config --global user.email "your@email.com"
+	> sudo git config --global user.name "yourusername"
+	- It is not recommended to lock the password into the computer
+
+
+x - 
+
