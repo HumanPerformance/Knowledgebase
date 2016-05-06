@@ -53,6 +53,7 @@ x - Installing Important Programs and IDEs
 	- Before we dive into the details of how to install every required program, here is a quick summary list:
 	1.0 - Arduino IDE
 	2.0 - Processing
+	3.0 - idle and idle3
 
 x.1 - Installing Arduino
 
@@ -62,9 +63,14 @@ x.1 - Installing Arduino
 x.2 - Installing Processing
 
 	- From the terminal
-	> curl https://processing.org/download/install-arm.sh | sudo sh
+	> sudo curl https://processing.org/download/install-arm.sh | sudo sh
 
+x.3 - Installing idle and idle3
 
+	- From the terminal
+	> sudo apt-get install idle
+	> sudo apt-get install idle3
+	- Note that idle is one of many python development evironments. However, idle is usually the default IDE on Raspberry Pi modules.
 
 ---------------------
 x - Git Configuration
