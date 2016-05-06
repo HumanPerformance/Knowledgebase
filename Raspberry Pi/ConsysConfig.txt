@@ -1,0 +1,19 @@
+*
+* ConsysConfig
+*
+* This guide has been designed to instruct the user on how to set-up the Raspbian OS that will be used as the ¨consys¨ or control system on the csec project
+*
+* Fluvio L. Lobo Fenoglietto 05/06/2016
+*
+
+*
+* Note:
+* a) This guide must be followed within the Raspbian OS
+* b) The steps on this guide should be compatible with Raspberry Pi 3 and up
+*
+
+1 - Raspbian Configuration
+
+1.1 - Expanding file systems
+
+	- From the terminal
