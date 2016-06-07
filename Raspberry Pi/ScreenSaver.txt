@@ -1,0 +1,14 @@
+# ScreenSaver.txt
+#
+# The following guide has been designed to help the user change some of the power settings of the Raspberry Pi
+#
+# Fluvio L Lobo Fenoglietto 06-06/2016
+
+> sudo nano /etc/lightdm/lightdm.conf
+
+under [SeatDefaults]
+
+> xserver-command=X -s 0 -dpms
+
+# References
+# 1- https://www.bitpi.co/2015/02/14/prevent-raspberry-pi-from-sleeping/

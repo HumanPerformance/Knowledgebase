@@ -1,7 +1,7 @@
 // Installation and implementation of BlueZ
 // HPH Knowledgebase
 // Fluvio L Lobo Fenoglietto 02/04/2016
-
+// Updated for Raspberry Pi 3 - 06/07/2016
 // Background ::
 
 > Bluetooth is a wireless technology standard for exchanging data over short distances (using short-wavelength UHF radio waves in the ISM band from 2.4 to 2.485 GHz[4]) from fixed and mobile devices, and building personal area networks (PANs).
@@ -17,18 +17,14 @@
 
 2.0- Install bluetooth libraries and manager
 
-> sudo apt-get install libdbus-1-dev libdbus-glib-1-dev libglib2.0-dev libical-dev libreadline-dev libudev-dev libusb-dev make
+> sudo apt-get install bluetooth bluez blueman
 
-Follow installation instructions if any
+Although the Raspberry Pi 3 comes with a built-in bluetooth antenna, it does not come with a bluetooth interface out-of-the-box. BlueZ Blueman provides the interface!
+Follow installation instructions if any...
 
-3.0- Download source
+3.0- Reboot System
 
-The user must know the latest (or desired) version of BlueZ to install. For more information, visit http://www.bluez.org/
-
-> mkdir -p work/bluepy
-> cd work/bluepy
-> wget https://www.kernel.org/pub/linux/bluetooth/bluez-5.37.tar.xz
-> tar xvf bluez-5.37.tar.xz
+> sudo reboot
 
 As of 02/04/2016, version 5.37 is the latest iteration of BlueZ
 
