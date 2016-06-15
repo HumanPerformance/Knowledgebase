@@ -25,21 +25,41 @@
 # iii - Guide:
 #
 # 1.0 - Connect board to Pocket AVR Programmer
+
 # 2.0 - Connect Pocket AVR Programmer to computer
-# 3.0 - (Only on Windows) Find the location of the executable "avrdude" within your system
-#	- "avrdude" should have been installed with the Arduino IDE 
-#       - If you dont have the Arduino IDE, install the program prior to following this guide
-# 4.0 - In the command-prompt/terminal change directory to that of "avrdude"   
-> cd C:\xx\WinAVR-xxxxxx\bin (Windows)
-# Note: For Windows, you may search for the executable "avrdude" using the start menu and then copy the path by opening the executable's containing folder.
-> sudo avrdude (Linux)
-# Note: In Linux, avrdude has already been defined on the system's path
-# 5.0 - (Only for ATMega328P) Enter the following on the command-prompt/terminal
-> avrdude -c usbtiny -p atmega328p -F
-# Where:
-# usbtiny - is the boorloader to be burned
-# atmega328p - is the target chip/processor
-# -F - overwrites signature modification on the chip/processor
+
+# 3.0 - Open Arduino IDE
+
+# 4.0 - Burn the USBtiny bootloader by:
+# Setting the correct programmer: "Tools>Programmer>USBtinyISP"
+# Start burning: "Tools>Burn Bootloader"
+# Note: You will get an ERROR so dont freak out!
+
+# 5.0 - Changing the signature on the "avrdude.conf"
+# Note: The ATMega chip used in some of our prototypes represents a different variant to the standard ATMega328 chip on the Arduino Pro Mini.
+# Therefore, burning the bootloader and uploading the code requires some quick modification.
+#       5.1 - Reading the error to find "avrdude.conf" location
+#	In order to identify the location of the "avrdude.conf" file in your computer, the error needs to be read with details.
+#	For this, the user must:
+#	- "File>Preferences" and check the "upload" box next to "Show verbose output"
+#	- "Tools>Burn Bootloader"
+#	5.2 - Reading the error line with the path to "avrdude.conf"
+#	On the bottom terminal of the IDE, between all the error lines, look for the path to "avrdude.conf"
+#	You may search by copying the errors, pasting on notepad, and searching for "avrdude.conf"
+#	5.3 - Open file and modify signature
+#	- Open the "avrdude.conf" file on a text editor
+#	- Search for "atmega328"
+#	- Under signature, change from "0x1e 0x95 0x0F" to "0x1e 0x95 0x14"
+#	- There are two signature lines within the same atmega328 section, make the change on both
+#	- Save but dont close the file, it must be reverted back to its original state!!!
+#	5.4 - Burn again!
+#	- Burn the bootloader! This time there should not be any mayor errors.
+
+# 6.0 - Disconnect Pocket AVR Programmer
+
+# 7.0 - Change the "avrdude.conf" back to the original signature
+
+# 8.0 - Connect prototype and try uploading any Arduino code!!!
 
 # iv  - References
 # 1.0 - 
