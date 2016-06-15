@@ -1,0 +1,46 @@
+# =====================================
+#
+# avrdude
+#
+# The following guide has been designed to guide the user on the implementation of avrdude, through the terminal/command window, to upload the USBtiny/Arduino bootloaders to the ATMega chips
+#
+# Fluvio L. Lobo Fenoglietto 06/15/2016
+# =====================================
+
+# i   - Background
+#
+# New ATMega chips are not sold with loaded bootloaders for USBtiny or Arduino programming.
+# In order to make these chips Arduino-ready, the corresponding bootloaders needs to be uploaded or "burned" to the chip.
+# The burning process requires specific hardware and some terminals commands. This guides focuses on what we believe to be the simplest and safest method to accomplish the task.
+
+# ii  - Requirements
+#      a) Hardware
+#         1.0 - SparkFun Pocket AVR Programmer
+#      b) Software
+#	  1.0 - Arduino IDE (will automatically install "avrdude")
+#
+# Note: This list of requirements assumes that your ATMega chip is already embedded on a PCB with pins available for programming.
+# If the chip being used does not meet this criteria, follow the complete SparkFun guide in the references below.
+
+# iii - Guide:
+#
+# 1.0 - Connect board to Pocket AVR Programmer
+# 2.0 - Connect Pocket AVR Programmer to computer
+# 3.0 - (Only on Windows) Find the location of the executable "avrdude" within your system
+#	- "avrdude" should have been installed with the Arduino IDE 
+#       - If you dont have the Arduino IDE, install the program prior to following this guide
+# 4.0 - In the command-prompt/terminal change directory to that of "avrdude"   
+> cd C:\xx\WinAVR-xxxxxx\bin (Windows)
+# Note: For Windows, you may search for the executable "avrdude" using the start menu and then copy the path by opening the executable's containing folder.
+> sudo avrdude (Linux)
+# Note: In Linux, avrdude has already been defined on the system's path
+# 5.0 - (Only for ATMega328P) Enter the following on the command-prompt/terminal
+> avrdude -c usbtiny -p atmega328p -F
+# Where:
+# usbtiny - is the boorloader to be burned
+# atmega328p - is the target chip/processor
+# -F - overwrites signature modification on the chip/processor
+
+# iv  - References
+# 1.0 - 
+#
