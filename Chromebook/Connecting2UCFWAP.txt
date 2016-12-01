@@ -1,0 +1,20 @@
+#
+# Connecting to UCF WAP
+#
+# The following short guide has been designed to help the user connect to the UCF WAP with a new Gallium OS (Linux) Chromebook
+#
+# Fluvio L Lobo Fenoglietto 12/01/2016
+#
+
+# 1. Connect to UCF_WAP2
+
+# 2. Under security settings (when propmted):
+#
+#    Security                :: WPA & WPA2 Enterprise
+#    Authentication          :: Protected EAP (PEAP)
+#    Anonymus Identity       :: [Blank]
+#    CA Certifcate           :: None - Check "No CA certificate is required"
+#    PEAP version            :: Automatic
+#    Inner authentication    :: MSCHAPv2
+#    Username                :: ...your NID
+#    Password                :: ...your NID password
